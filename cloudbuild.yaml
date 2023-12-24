@@ -22,10 +22,10 @@ steps:
   - name: gcr.io/cloud-builders/mvn
     args: ['deploy']  
   - name: gcr.io/cloud-builders/docker
-    args: ["build", "-t", "asia-south1-docker.pkg.dev/jaioct2/jairepo/service", "--build-arg=JAR_FILE=target/*.jar", "."]
-images: ["asia-south1-docker.pkg.dev/jaioct2/jairepo/service"]
+    args: ["build", "-t", "asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo/service", "--build-arg=JAR_FILE=target/*.jar", "."]
+images: ["asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo/service"]
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
-    name: 'projects/jaioct2/locations/asia-south1/workerPools/demopool'
+    name: 'projects/charged-state-403505/locations/asia-south1/workerPools/demopool'
 # [END cloudbuild_maven]

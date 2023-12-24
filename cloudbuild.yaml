@@ -27,5 +27,5 @@ images: ["asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo/service"]
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
-    name: 'projects/charged-state-403505/locations/asia-south1/workerPools/demopool'
+    name: 'projects/charged-state-403505/locations/asia-south1/workerPools/maven-private-pool'
 # [END cloudbuild_maven]

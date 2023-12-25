@@ -39,30 +39,36 @@
 	</dependencies>
 
 	<build>
-    <extensions>
-      <extension>
-        <groupId>com.google.cloud.artifactregistry</groupId>
-        <artifactId>artifactregistry-maven-wagon</artifactId>
-        <version>2.2.0</version>
-      </extension>
-    </extensions>
-  </build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<extensions>
+                  <extension>
+                    <groupId>com.google.cloud.artifactregistry</groupId>
+                    <artifactId>artifactregistry-maven-wagon</artifactId>
+                    <version>2.2.0</version>
+                  </extension>
+                </extensions>
+	</build>
 
 	<distributionManagement>
           <snapshotRepository>
             <id>artifact-registry</id>
-            <url>artifactregistry://asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo</url>
+            <url>artifactregistry://asia-south1-maven.pkg.dev/charged-state-403505/mavenrepo/maven-repo</url>
           </snapshotRepository>
           <repository>
             <id>artifact-registry</id>
-            <url>artifactregistry://asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo</url>
+            <url>artifactregistry://asia-south1-maven.pkg.dev/charged-state-403505/mavenrepo/maven-repo</url>
           </repository>
         </distributionManagement>
 
         <repositories>
           <repository>
             <id>artifact-registry</id>
-            <url>artifactregistry://asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo</url>
+            <url>artifactregistry://asia-south1-maven.pkg.dev/charged-state-403505/mavenrepo/maven-repo</url>
             <releases>
               <enabled>true</enabled>
             </releases>

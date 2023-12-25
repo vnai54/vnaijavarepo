@@ -22,8 +22,8 @@ steps:
   - name: gcr.io/cloud-builders/mvn
     args: ['deploy']  
   - name: gcr.io/cloud-builders/docker
-    args: ["build", "-t", "asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo", "--build-arg=JAR_FILE=target/*.jar", "."]
-images: ["asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo"]
+    args: ["build", "-t", "asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo/service", "--build-arg=JAR_FILE=target/*.jar", "."]
+images: ["asia-south1-docker.pkg.dev/charged-state-403505/vinayrepo/service"]
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
